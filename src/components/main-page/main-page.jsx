@@ -18,8 +18,6 @@ class MainPage extends PureComponent {
     this.createMarkup = this.createMarkup.bind(this);
   }
 
-
-
   createMarkup(val) {
     return {__html: val};
   }
@@ -35,7 +33,6 @@ class MainPage extends PureComponent {
       updateData(code);
     }
   }
-
 
   render() {
   const {itemsList} = this.props;
@@ -57,8 +54,6 @@ class MainPage extends PureComponent {
                   <span dangerouslySetInnerHTML={this.createMarkup(item.code)} />
                 </ItemStyled>
                 </>
-
-
             ))}
           </ListStyled>
         </TableStyled>
@@ -77,6 +72,7 @@ const mapStateToProps = (state) => {
       itemsList: state.itemsList,
   }
 }
+
 const mapDispatchToProps = dispatch => {
   return {
       updateData(code) {
