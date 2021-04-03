@@ -7,7 +7,7 @@
 ### Installation
 Clone the repo
 ```sh
-git clone git@
+git clone git@github.com:KaterinaKorneeeva/utkonos-test.git
 ```
 Install dependencies with npm or yarn:
 ```sh
