@@ -49,11 +49,9 @@ class MainPage extends PureComponent {
             />
           <ListStyled>
               {itemsList.map((item, i) => (
-                <>
                 <ItemStyled key ={i}>
                   <span dangerouslySetInnerHTML={this.createMarkup(item.code)} />
                 </ItemStyled>
-                </>
             ))}
           </ListStyled>
         </TableStyled>

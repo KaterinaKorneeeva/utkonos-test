@@ -12,7 +12,6 @@ export const ActionCreator = {
   updateData: (code) => {
     return {
       type: ActionType.UPDATE_ITEMS,
-      code: code,
       itemsList: itemsByCode(code, items)
 
     };
