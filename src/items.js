@@ -12,13 +12,13 @@ export const itemsByCode = (searchCode, items = []) => {
 
 const highlight = (code, searchCode) => {
   const tag = 'span';
-  let i, len = searchCode.length, re;
-
-  for (i = 0; i < len; i++) {
-    re = new RegExp(searchCode, 'g');
+  let re;
+  searchCode.split('').forEach(() => {
+    re = new RegExp(searchCode, 'g')
     if (re.test(code)) {
       code = code.replace(re, '<'+ tag +' class="highlight">$&</'+ tag +'>');
     }
-  }
+  })
+
   return code;
 }
